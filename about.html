@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>TempWatch - Weather Tracker</title>
+</head>
+<body>
+    <!-- NAVIGATION BAR -->
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html"><img src="final-logo.png" alt="Logo"></a></div>
+            <ul class="links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="toggle-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+
+        <div class="dropdown-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <section class="about-section">
+            <h1 id="title">About</h1>
+            <div class="about-content">
+                <div class="stripe">
+                    <h2>About TempWatch</h2>
+                    <p class="information">
+                        Say Hello to TempWatch - Your Weather Update and Temperature Tracker! TempWatch will let you know when temperature conditions in your area are approaching a threshold level, so you don't miss any of the alarm notifications. Plan a fun day out in nature, track extreme conditions, or follow the daily shifts in temperature - TempWatch is up for it!
+                    </p>
+                </div>
+    
+                <div class="stripe">
+                    <h2>Why TempWatch?</h2>
+                    <p class="information">
+                        TempWatch keeps you updated with real-time data on the temperature conditions of any city you select. It helps you stay one step ahead of the weather by setting a specific temperature threshold that it alerts you to when the conditions become too hot or too cold. That way, you are always ready for whatever the day has in store.
+                    </p>
+                </div>
+    
+                <div class="stripe">
+                    <h2>How TempWatch Works</h2>
+                    <ul class="information">
+                        <li><b>Monitoring:</b> The app continuously tracks your selected location's weather.</li>
+                        <li><b>Notifications:</b> Whenever your selected temperature threshold is achieved or surpassed, the application sends you a notification that will let you know to do something.</li>
+                    </ul>
+                </div>
+    
+                <div class="stripe">
+                    <h2>Our Technology</h2>
+                    <p class="information">
+                        Our interface is built using HTML and CSS, while our backend is done using JavaScript for data processing and for giving notifications. We then fetch real-time weather information through the OpenWeatherMap API. This combination has made TempWatch run very efficiently on most devices to give you accurate and timely information.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <span class="brand">TempWatch</span>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <p>&copy; 2024 Designed by Fernando and Bacanto</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- JAVASCRIPT -->        
+    <script>
+        const toggleBtn = document.querySelector('.toggle-btn')
+        const toggleBtnIcon = document.querySelector('.toggle-btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+
+        toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark'
+        : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>
